@@ -1,4 +1,6 @@
-#/bin/bash
+#!/bin/bash
+
+set -o nounset
 
 ref=$1
 flo=$2
