@@ -10,3 +10,5 @@ docker container run --rm \
     -v $(dirname $flo):/flo vcasellesb/niftyreg \
     bash -c "reg_aladin -ref /ref/$(basename $ref) -flo /flo/$(basename $flo) -aff /flo/aff_trans.txt && \
     reg_resample -ref /ref/$(basename $ref) -flo /flo/$(basename $flo) -trans /flo/aff_trans.txt -res /flo/res.nii.gz"
+
+echo "Registration performed. You can find your file at $(dirname $flo)/res.nii.gz"
